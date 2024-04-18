@@ -2,7 +2,7 @@ import { BusRoute } from "@/app/ui/bus-routes/definition";
 import Link from "next/link";
 
 async function getRoutes(id: string) {
-  const res = await fetch(`http://localhost:3001/api/bus-routes/${id}`);
+  const res = await fetch(`${process.env.API_URL}/bus-routes/${id}`);
   const data = await res.json();
   return data;
 }

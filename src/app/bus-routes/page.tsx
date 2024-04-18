@@ -1,7 +1,7 @@
 import BusRoute from "@/app/ui/bus-routes/busRoute";
 
 async function fetchBusRoutes() {
-  const res = await fetch("http://localhost:3001/api/bus-routes");
+  const res = await fetch(`${process.env.API_URL}/bus-routes`);
   console.log(res);
   const data = await res.json();
   return data;
